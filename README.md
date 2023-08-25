@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Lista de Membros
 
-Currently, two official plugins are available:
+## How can I start the project?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+it's not difficult. Follow the steps:
 
-## Expanding the ESLint configuration
+1. Clone this repository,
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```
+$ git clone https://github.com/SallesCosta/Lista-de-Membros.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Once inside the directory, you must run `yarn`
+and wait a few seconds until the project dependencies are installed.
+
+3. Then run `yarn dev`, go to [localhost](http://localhost:3000) and <i>voilà!</i>
+
+4. You need to be inside the ./Member-List/api-Simulation directory and run `yarn dev` to start a backend/API simulation to provide the data.
+
+In this project you can find some users and their public information.
+Not all data from the users may be available, but you have the phone and the e-mail. We can contact them directly.
+
+
+# Basic Usage 
+
+You only have to write the name in the input-text, if there is a user with that name it will be displayed.
+Each user has a profile that shows their information by clicking on the respective card.
+Or you can filter the Api`s datas by State in the FilterSection (left side).
+
+A maximum of 9 users will be displayed at a time, but all are accessible, just use Pagination, which will appear below the list of users.
+
+
+Any questions? Any suggestions? We can talk about.
+
+Thank you for reading up to this point.
