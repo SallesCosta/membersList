@@ -1,5 +1,5 @@
 
-# Lista de Membros
+# Members List
 
 ## How can I start the project?
 
@@ -8,7 +8,7 @@ it's not difficult. Follow the steps:
 1. Clone this repository,
 
 ```
-$ git clone https://github.com/SallesCosta/Lista-de-Membros.git
+$ git clone https://github.com/SallesCosta/membersList.git
 ```
 
 2. Once inside the directory, you must run `yarn`
@@ -16,7 +16,7 @@ and wait a few seconds until the project dependencies are installed.
 
 3. Then run `yarn dev`, go to [localhost](http://localhost:3000) and <i>voilà!</i>
 
-4. You need to be inside the ./Member-List/api-Simulation directory and run `yarn dev` to start a backend/API simulation to provide the data.
+4. In `./members-list/api/` directory and run `yarn dev` to start a backend/API simulation to provide the data.
 
 In this project you can find some users and their public information.
 Not all data from the users may be available, but you have the phone and the e-mail. We can contact them directly.
