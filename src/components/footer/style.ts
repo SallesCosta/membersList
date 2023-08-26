@@ -32,13 +32,6 @@ export const Footer__container = styled.div`
   }
 `
 
-export const Footer__logo = styled.img`
-  align-items: center;
-  display: block;
-  height: 48px;
-  width: 48.35px;
-`
-
 export const Footer__text = styled.h1`
   display: flex;
   font-size: 1.5rem;

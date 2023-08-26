@@ -11,12 +11,11 @@ export const FilterSection = () => {
     <>
       <S.CardFilter show={show.toString()}>
         <S.CardFilterBox show={show.toString()}>
-          <T.Text20>Por Estado</T.Text20>
+          <T.Text20>Brazilian Regions</T.Text20>
           {lista.map((estado) => {
             return (
               <S.CardFilterLine key={estado.id}>
-                <S.CardFilterCheckbox
-                  type='checkbox'
+                <input type='checkbox'
                   checked={novaLista.includes(estado.id)}
                   id={estado.name}
                   name={estado.name}

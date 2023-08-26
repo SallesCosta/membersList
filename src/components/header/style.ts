@@ -64,17 +64,6 @@ export const HeaderInput = styled.input`
     }
 `
 
-const jsmFont = (dsVar: string) => {
-  return `
-      // font: ${dsVar};
-      // letter-spacing: ${dsVar}-letter;
-      // line-height: ${dsVar};
-
-      border: 1px solid ${dsVar};
-      color: ${dsVar};
-    `
-}
-
 export const HeaderButtonClear = styled.button`
   ${({ theme }) => css`
     align-items: center;
@@ -88,14 +77,10 @@ export const HeaderButtonClear = styled.button`
     transition: 0.3s;
 
     &:hover {
-      ${jsmFont(theme.colors.orange2)};
+      border: ${theme.colors.orange1};
+      color: ${theme.colors.orange1};
       background: ${theme.colors.orange1};
       transform: scale(1.05);
     }
   `}
-`
-
-export const HeaderLogo = styled.img`
-  align-items: center;
-  display: block;
 `

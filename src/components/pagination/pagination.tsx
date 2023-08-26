@@ -1,7 +1,7 @@
 import { useGlobalContext } from '@/shared/globalContext'
 import pagination from './index'
 import * as S from './style'
-import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
+// import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
 import { ArrowLeftIcon } from '@/assets/arrowLeftIcon'
 import { ArrowRightIcon } from '@/assets/arrowRightIcon'
 
@@ -28,7 +28,7 @@ const Page = ({ page, activePage }: PageProps) => {
   const handleClick = isDot ? null : () => setPage(+page)
 
   return (
-    <S.PaginationLink active={activePage === page} onClick={handleClick}>
+    <S.PaginationLink show={activePage === page} onClick={handleClick}>
       <Component>{page}</Component>
     </S.PaginationLink>
   )

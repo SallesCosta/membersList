@@ -14,14 +14,14 @@ export const PaginationInternal = styled.div`
 `
 
 type PaginationLinkProps = {
-  active: boolean
+  show: boolean
   onClick: null | (() => void)
 }
 
 export const PaginationLink = styled.button<PaginationLinkProps>`
-  ${({ theme, active }) => css`
+  ${({ theme, show }) => css`
     align-items: center;
-    background: ${active ? `${theme.colors.grey5}` : `${theme.colors.white}`};
+    background: ${show ? `${theme.colors.grey5}` : `${theme.colors.white}`};
     border-radius: 100%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
     cursor: poiter;
@@ -40,7 +40,7 @@ export const PaginationLink = styled.button<PaginationLinkProps>`
     span {
       background: none;
       border: none;
-      color: ${active ? `${theme.colors.white}` : `${theme.colors.grey5}`};
+      color: ${show ? `${theme.colors.white}` : `${theme.colors.grey5}`};
       outline: inherit;
       padding: 0;
       text-decoration: none;

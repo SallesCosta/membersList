@@ -140,16 +140,17 @@ export const CardHead = styled(Card)`
 
 export const CardFilter = styled(Card) <CardFilterProps>`
   flex-direction: column;
-  height: ${(props) => (props.show === 'true' ? '900px' : '474px')};
+  height: ${(props) => (props.show === 'true' ? '1070px' : '474px')};
   margin-right: 1rem;
   margin-bottom: 1.2rem;
   min-width: 272px;
+
   padding: 24px 27px;
   transition: 0.4s;
   width: 272px;
 
   @media (max-width: 1000px) {
-    height: ${(props) => (props.show ? '850px' : '75px')};
+    height: ${(props) => (props.show === 'true' ? '850px' : '75px')};
     margin: auto;
     margin-bottom: 1rem;
     padding: 10px 27px;
@@ -158,22 +159,20 @@ export const CardFilter = styled(Card) <CardFilterProps>`
 `
 
 export const CardFilterBox = styled.div<CardFilterProps>`
-  height: ${(props) => (props.show === 'true' ? 'auto' : '170px')};
+  height: ${(props) => props.show === 'true' ? 'auto' : '170px'};
   overflow-y: hidden;
 
   @media (max-width: 1000px) {
-    height: ${(props) => (props.show ? '800px' : '25px')};
+    height: ${(props) => props.show === 'true' ? '800px' : '25px'};
   }
 `
 
 export const CardFilterLine = styled.div`
+  aligne-items: center;
   display: flex;
   flex-direction: row;
-`
-
-export const CardFilterCheckbox = styled.input`
-  margin-right: 8px;
-  margin-top: 7px;
+  gap: 8px;
+  padding: 4px;
 `
 
 export const CustomerContainer = styled(Card)`

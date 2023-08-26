@@ -1,8 +1,8 @@
 import { useGlobalContext } from '@/shared/globalContext'
 import { ChangeEvent, FormEvent } from 'react'
-import logo from '@/assets/logo.png'
 import * as S from './style'
 import { SearchIcon } from '@/assets/searchIcon'
+import { LucideBoxes } from '@/assets/LucideBoxes'
 import { useNavigate } from 'react-router-dom'
 
 export const Header = () => {
@@ -63,15 +63,14 @@ export const Header = () => {
   return (
     <S.HeaderInternal>
       <S.HeaderContainer>
-        {/* <S.HeaderLogo src={logo} /> */}
-        {/* <Image src={logo} /> */}
+        <LucideBoxes width='48px' height='48px' strokeWidth='1' />
         <form onSubmit={handleSubmit}>
           <S.HeaderInputLabel>
             <SearchIcon />
             <S.HeaderInput
               onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}
               value={data}
-              placeholder='Buscar aqui'
+              placeholder='Search...'
               name='name'
             />
           </S.HeaderInputLabel>

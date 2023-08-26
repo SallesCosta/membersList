@@ -7,6 +7,7 @@ import {
   SetStateAction,
   useEffect,
 } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { lista } from './listaEstados'
 
@@ -101,7 +102,7 @@ type ContextProps = {
 
 const DataContext = createContext<ContextValue | null>(null)
 
-export function ContextProvider ({ children }: ContextProps): JSX.Element {
+export function ContextProvider({ children }: ContextProps): JSX.Element {
   const [novaLista, setNovaLista] = useState<string[]>([])
   const [userData, setUserData] = useState<userProps[]>([])
   const [selected, setSelected] = useState<userProps[]>([])
@@ -111,6 +112,9 @@ export function ContextProvider ({ children }: ContextProps): JSX.Element {
 
   const [data, setData] = useState<string>('')
   const [page, setPage] = useState<number>(1)
+
+
+  const navigate = useNavigate()
 
   const getData = async () => {
     const url = 'http://localhost:3001/results'
@@ -160,7 +164,7 @@ export function ContextProvider ({ children }: ContextProps): JSX.Element {
       })
       .join(' ')
 
-    function fixCase (word: string) {
+    function fixCase(word: string) {
       return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
     }
     return goodString
@@ -201,6 +205,12 @@ export function ContextProvider ({ children }: ContextProps): JSX.Element {
     setNovaLista(a)
   }, [userData])
 
+  useEffect(() => {
+    if (customer === initialProps) {
+      navigate('/')
+    }
+  }, [customer, navigate])
+
   return (
     <DataContext.Provider
       value={{
@@ -231,7 +241,7 @@ export function ContextProvider ({ children }: ContextProps): JSX.Element {
   )
 }
 
-export function useGlobalContext () {
+export function useGlobalContext() {
   const context = useContext(DataContext)
   if (!context) {
     throw new Error(
