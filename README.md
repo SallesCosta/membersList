@@ -1,6 +1,8 @@
 
 # Members List
 
+[Deployed version in Netlify](https://escapps-memberslist.netlify.app/)
+
 ## How can I start the project?
 
 it's not difficult. Follow the steps:
